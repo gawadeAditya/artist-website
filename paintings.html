@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paintings</title>
+</head>
+<body>
+    <section id="painting-categories">
+        <h2>Explore Paintings by Category</h2>
+    </section>
+    
+    <section id="abstract">
+        <h3>Abstract Paintings</h3>
+        <div class="painting-card">
+            <img src="img/abstract1.jpg" alt="Abstract Painting 1">
+            <h4>Abstract Painting 1</h4>
+            <p>Some description here.</p>
+            <button>Request Purchase</button>
+        </div>
+        <!-- More abstract paintings here -->
+    </section>
+    
+    <section id="portrait">
+        <h3>Portrait Paintings</h3>
+        <div class="painting-card">
+            <img src="img/portrait1.jpg" alt="Abstract Painting 1">
+            <h4>Abstract Painting 1</h4>
+            <p>Some description here.</p>
+            <button>Request Purchase</button>
+        </div>
+        <!-- Similar structure for portrait paintings -->
+    </section>
+    
+    <section id="nature">
+        <h3>Nature Paintings</h3>
+        <div class="painting-card">
+            <img src="img/nature1.jpg" alt="Abstract Painting 1">
+            <h4>Abstract Painting 1</h4>
+            <p>Some description here.</p>
+            <button>Request Purchase</button>
+        </div>
+        <!-- Similar structure for nature paintings -->
+    </section>
+
+    <section id="paintings-gallery">
+        <h2>Paintings</h2>
+        <div class="category-filter">
+            <button onclick="filterCategory('abstract')">Abstract</button>
+            <button onclick="filterCategory('portrait')">Portrait</button>
+            <button onclick="filterCategory('nature')">Nature</button>
+        </div>
+    
+        
+    </section>
+    
+    <script>
+        function filterCategory(category) {
+            let cards = document.querySelectorAll('.painting-card');
+            cards.forEach(card => {
+                card.style.display = card.classList.contains(category) ? 'block' : 'none';
+            });
+        }
+    </script>
+    
+    
+</body>
+</html>
